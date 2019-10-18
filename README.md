@@ -2,7 +2,7 @@
 
 ### Matool will bother a bit those nasty WiFi killers
 
-Matool is a MAC address toolkit that will possibly make the process of changing MAC. 
+Matool is a MAC address toolkit that will possibly make the process of changing MAC easier. 
 However, this tool was originally developed by me to dodge MAC filtering.
 The process of try-and-error was VERY uncomfortable and it drove me insane.
 
@@ -13,4 +13,4 @@ Since I had problems accessing WiFi network with strong MAC filtering, I knew so
 
 
 
-### This program is still in progress, (and I honestly don't have any intentions on upgrading this a lot
+#### This program is still in progress, (and I honestly don't have any intentions on upgrading this a lot
