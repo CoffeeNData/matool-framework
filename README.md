@@ -13,4 +13,4 @@ Since I had problems accessing WiFi network with strong MAC filtering, I knew so
 
 
 
-#### This program is still in progress, (and I honestly don't have any intentions on upgrading this a lot
+#### This program is still in progress, (and I honestly don't have any intentions on upgrading this regularly)
