@@ -4,7 +4,7 @@ echo
 echo "[*] Installing dependencies..."
 
 sudo apt-get update && apt get upgrade
-sudo apt-get install macchanger python python3-pip
+sudo apt-get install macchanger python python3-pip nmap
 
 echo "Done."
 echo
