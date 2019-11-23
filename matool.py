@@ -1,8 +1,47 @@
 from os import system
+import nmap
 
 print("")
 print("Welcome to the MAC Address Assisted Toolkit - Matool-")
 print("")
+
+def customChange(mac):
+	print("[*] Shutting down wlan0...")
+	system("ifconfig wlan0 down")
+	print("Done.")
+
+	print()
+
+	print("[*] Changing MAC to " + str(mac) + "...")
+	system("macchanger -m " + str(mac) + " wlan0")
+	print("Done.")
+
+	print()
+
+	print("[*] Shutting up wlan0...")
+	system("ifconfig wlan0 up")
+	print("Done.")
+	print()
+
+def personalChange():
+	print("[*] Shutting down wlan0...")
+	system("ifconfig wlan0 down")
+	print("Done.")
+
+	print()
+
+	print("[*] Changing to default MAC...")
+	system("macchanger -p wlan0")
+	print("Done.")
+
+	print()
+
+	print("[*] Shutting up wlan0...")
+	system("ifconfig wlan0 up")
+	print("Done.")
+	print()
+
+
 
 
 def help():
@@ -13,44 +52,39 @@ def help():
 	print("pmac      -  Changes to your permanent MAC")
 	print("smac      -  Shows current MAC address")
 	print("help      -  Shows this list")
-	print("ping      -  Runs ping on google.com")
-	print("scan      -  Scans the local network")
+	print("ping      -  Pings Google")
+	print("scan      -  Scans the local network. Will not work with arguments")
 	print("clear     -  Clears the screen")
 
 help()
 
 while True:
 
-	mactochangeto=input("\nOption > ")
+	option=input("Option > ")
 
-	if mactochangeto=="quit" or mactochangeto=="exit":
+	if option=="quit" or option=="exit":
 		break
-	elif mactochangeto=="cmac":
-
-		custom_mac=input("Write the new MAC address: ")
-	
-		system("bash 3.1change-mac")
-		print("[*] Changing MAC address...")
+	elif option=="cmac":
+		custom_mac=input("New MAC >  ")
+		customChange(custom_mac)
+	elif option=="pmac":
+		personalChange()
 		print("")
-		system("macchanger -m " + custom_mac + " wlan0")
-		print("")
-		print("Done.")
-
-	elif mactochangeto=="pmac":
-		system("bash 4change-mac.sh")
-	elif mactochangeto=="help":
+	elif option=="help":
+		print()
 		help()
-	elif mactochangeto=="clear":
+		print("")
+	elif option=="clear":
 		system("clear")
-	elif mactochangeto=="ping":
+	elif option=="ping":
 		system("ping -c 3 google.com")
-	elif mactochangeto=="scan":
-		print("")
-		scanner=input("Write the IP range, or a specific IP: ")
-		system("nmap " + scanner)
-	elif mactochangeto=="smac":
+		print()
+	elif option=="scan":
+		system('python3 scanner.py')
+	elif option=="smac":
 		system("macchanger -s wlan0")
+		print()
 	else:
-		help()
+		pass
 
 print("[*] Quitting...")

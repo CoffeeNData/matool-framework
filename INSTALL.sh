@@ -13,6 +13,7 @@ echo
 echo "[*] Installing requirements..."
 
 pip3 install os
+pip3 install python-nmap
 
 echo "Done."
 
