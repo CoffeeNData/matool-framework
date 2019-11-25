@@ -1,23 +1,23 @@
+#! /bin/python3
+
 from os import system
-import nmap
 
 print("")
-print("Welcome to the MAC Address Assisted Toolkit - Matool-")
+print("Welcome to the MAC Address Toolkit - Matool-")
 print("")
 
+"""
+FUNCTIONS
+"""
 def customChange(mac):
 	print("[*] Shutting down wlan0...")
 	system("ifconfig wlan0 down")
 	print("Done.")
-
 	print()
-
 	print("[*] Changing MAC to " + str(mac) + "...")
 	system("macchanger -m " + str(mac) + " wlan0")
 	print("Done.")
-
 	print()
-
 	print("[*] Shutting up wlan0...")
 	system("ifconfig wlan0 up")
 	print("Done.")
@@ -27,22 +27,15 @@ def personalChange():
 	print("[*] Shutting down wlan0...")
 	system("ifconfig wlan0 down")
 	print("Done.")
-
 	print()
-
 	print("[*] Changing to default MAC...")
 	system("macchanger -p wlan0")
 	print("Done.")
-
 	print()
-
 	print("[*] Shutting up wlan0...")
 	system("ifconfig wlan0 up")
 	print("Done.")
 	print()
-
-
-
 
 def help():
 	print("Available options:")
@@ -56,7 +49,12 @@ def help():
 	print("scan      -  Scans the local network. Will not work with arguments")
 	print("clear     -  Clears the screen")
 
+"""
+MAIN PROGRAM
+"""
+
 help()
+print()
 
 while True:
 
@@ -65,7 +63,8 @@ while True:
 	if option=="quit" or option=="exit":
 		break
 	elif option=="cmac":
-		custom_mac=input("New MAC >  ")
+		custom_mac=input("New MAC > ")
+		print()
 		customChange(custom_mac)
 	elif option=="pmac":
 		personalChange()
@@ -80,11 +79,18 @@ while True:
 		system("ping -c 3 google.com")
 		print()
 	elif option=="scan":
-		system('python3 scanner.py')
+		scanTarget=input("RHOSTS > ")
+		system("nmap -F " + str(scanTarget))
 	elif option=="smac":
 		system("macchanger -s wlan0")
 		print()
-	else:
+	elif option=="":
 		pass
+	else:
+		print()
+		print("[!] Unknown command. Write 'help' for a list of available tools")
+		print()
 
-print("[*] Quitting...")
+print()
+print("[!] Exited successfully")
+quit()

@@ -3,23 +3,17 @@
 echo
 echo "[*] Installing dependencies..."
 
-sudo apt update && apt upgrade
-sudo apt install macchanger python python3-pip nmap
+xterm -e sudo apt update
+xterm -e sudo apt upgrade
+xterm -e sudo apt install macchanger python python3-pip nmap
 
 echo "Done."
 echo
-
-echo
-echo "[*] Installing Python requirements..."
-
-pip3 install python-nmap
-
-echo "Done."
 
 echo
 echo "[*] Fixing permissions..."
 
-sudo chmod +x matool.py
+xterm -e sudo chmod +x matool.py
 
 echo "Done."
 echo
