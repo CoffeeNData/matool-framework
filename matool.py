@@ -61,7 +61,7 @@ def read_notes():
 
 def modify_notes():
 	print("[*] Opening the notes file...")
-	system("nano matnotes.txt")
+	system("xterm -e nano matnotes.txt")
 	print("Done.")
 	print()
 
