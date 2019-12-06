@@ -48,6 +48,22 @@ def help():
 	print("ping      -  Pings Google")
 	print("scan      -  Scans the local network. Will not work with arguments")
 	print("clear     -  Clears the screen")
+	print("rnotes    -  Read the notes file")
+	print("mnotes    -  Modifies the notes file. You can write a list of usual MAC addressess")
+
+	#The notes file is called "matnotes.txt"
+def read_notes():
+	print()
+	print("<-------------BEGIN OF NOTES------------->")
+	system("cat matnotes.txt")
+	print("<--------------END OF NOTES-------------->")
+	print()
+
+def modify_notes():
+	print("[*] Opening the notes file...")
+	system("nano matnotes.txt")
+	print("Done.")
+	print()
 
 """
 MAIN PROGRAM
@@ -86,6 +102,10 @@ while True:
 		print()
 	elif option=="":
 		pass
+	elif option=="rnotes":
+		read_notes()
+	elif option=="mnotes":
+		modify_notes()
 	else:
 		print()
 		print("[!] Unknown command. Write 'help' for a list of available tools")
