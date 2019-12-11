@@ -3,9 +3,10 @@
 echo "This will remove the files generated in the MatooL generated directory, like the notes file."
 echo "Are you sure you want to uninstall MatooL-Framework? [YES/NO]"
 read answer
-if [[$answer == "YES"]]; then
+if [[ $answer=="YES" ]]; then
     echo "Okay..."
     rm -r ~/.matool-documents
-else; then
+    echo "Uninstalled."
+else
     echo "Aborting..."
 fi

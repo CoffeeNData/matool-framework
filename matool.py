@@ -122,6 +122,8 @@ while True:
 		read_notes()
 	elif option=="mnotes":
 		modify_notes()
+	elif option=="rmac":
+		randomChange()
 	else:
 		print()
 		print("[!] Unknown command. Write 'help' for a list of available tools")
