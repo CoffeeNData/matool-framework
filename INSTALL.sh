@@ -11,8 +11,8 @@ echo "Done."
 echo
 
 echo "[*] Adding a notes file..."
-
-echo "This is your notes file. You can freely modify it at your wish using 'mnotes' while using Matool. If you accidentaly delete this, run INSTALL.sh to fix it." > matnotes.txt
+mkdir ~/.matool-documents
+echo "This is your notes file. You can freely modify it at your wish using 'mnotes' while using Matool. If you accidentaly delete this, run INSTALL.sh to fix it." > ~/.matool-documents/matnotes.txt
 
 echo "Done."
 echo

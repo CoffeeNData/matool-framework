@@ -28,8 +28,22 @@ def personalChange():
 	system("ifconfig wlan0 down")
 	print("Done.")
 	print()
-	print("[*] Changing to default MAC...")
+	print("[*] Changing to your default MAC...")
 	system("macchanger -p wlan0")
+	print("Done.")
+	print()
+	print("[*] Shutting up wlan0...")
+	system("ifconfig wlan0 up")
+	print("Done.")
+	print()
+
+def randomChange():
+	print("[*] Shutting down wlan0...")
+	system("ifconfig wlan0 down")
+	print("Done.")
+	print()
+	print("[*] Changing to a random MAC...")
+	system("macchanger -r wlan0")
 	print("Done.")
 	print()
 	print("[*] Shutting up wlan0...")
@@ -44,24 +58,26 @@ def help():
 	print("cmac      -  Changes to a custom MAC")
 	print("pmac      -  Changes to your permanent MAC")
 	print("smac      -  Shows current MAC address")
+	print("rmac      -  Changes to a random MAC address")
 	print("help      -  Shows this list")
 	print("ping      -  Pings Google")
 	print("scan      -  Scans the local network. Will not work with arguments")
 	print("clear     -  Clears the screen")
 	print("rnotes    -  Read the notes file")
-	print("mnotes    -  Modifies the notes file. You can write a list of usual MAC addressess")
+	print("mnotes    -  Modifies the notes file. You should write a list of MAC addressess")
+	print("             You should write MAC addresses you usually use")
 
 	#The notes file is called "matnotes.txt"
 def read_notes():
 	print()
 	print("<-------------BEGIN OF NOTES------------->")
-	system("cat matnotes.txt")
+	system("cat ~/.matool-documents/matnotes.txt")
 	print("<--------------END OF NOTES-------------->")
 	print()
 
 def modify_notes():
 	print("[*] Opening the notes file...")
-	system("xterm -e nano matnotes.txt")
+	system("nano ~/.matool-documents/matnotes.txt")
 	print("Done.")
 	print()
 
