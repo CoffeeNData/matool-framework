@@ -11,12 +11,12 @@ The process of try-and-error was VERY uncomfortable and it drove me insane.
 The MAC filtering testing process is a lot easier with Matool. Really, at least for me.
 Since I had problems accessing WiFi network with strong MAC filtering, I knew someday I would end up somehow writing some code to simplify my access to filtered networks.
 
+### Important:
 
+I encourage you to post the **bugs** you have found in the `Issues` section.
+This will make my work debugging easyer (and will for sure improve your experience).
 
-#### This is still in progress, I will do my best at developping this beautifull child.
+Oh! And remember...
+## I DONT TAKE ANY RESPONABILITY!
 
-### PLEASE, in case you find out bugs or you have more ideas, please do not be shy on posting it in the 'Issues' section.
-
-
-
-### DISCLAIMER: I DO NOT TAKE RESPONSABILITY ON HOW YOU USE THIS TOOL
+### Have fun ;) !

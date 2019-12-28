@@ -1,14 +1,17 @@
 #! /bin/python3
-
 from os import system
-
-print("")
-print("Welcome to the MAC Address Toolkit - Matool-")
-print("")
 
 """
 FUNCTIONS
 """
+def banner():
+	print()
+	print(" _____       _              __      ")
+	print("|     | ___ | |_  ___  ___ |  |     ")
+	print("| | | || .'||  _|| . || . ||  |__   ")
+	print("|_|_|_||__,||_|  |___||___||_____|  ")
+	print()
+
 def customChange(mac):
 	print("[*] Shutting down wlan0...")
 	system("ifconfig wlan0 down")
@@ -85,6 +88,7 @@ def modify_notes():
 MAIN PROGRAM
 """
 
+banner()
 help()
 print()
 
