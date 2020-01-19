@@ -67,7 +67,7 @@ def help():
 	print("scan      -  Scans the local network. Will not work with arguments")
 	print("clear     -  Clears the screen")
 	print("rnotes    -  Read the notes file")
-	print("mnotes    -  Modifies the notes file. You should write a list of MAC addressess")
+	print("mnotes    -  Modifies the notes file.")
 	print("             You should write MAC addresses you usually use")
 
 	#The notes file is called "matnotes.txt"
