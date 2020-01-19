@@ -15,7 +15,7 @@ echo "Done."
 echo
 
 echo "[*] Copying to '/bin' folder..."
-cp ./matool.py /bin/matool
+sudo cp ./matool.py /bin/matool
 echo Done
 
 echo
