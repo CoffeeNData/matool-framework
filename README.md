@@ -16,6 +16,8 @@ Since I had problems accessing WiFi network with strong MAC filtering, I knew so
 I encourage you to post the **bugs** you have found in the `Issues` section.
 This will make my work debugging easyer (and will for sure improve your experience).
 
+Do not run this as root, as you will break the notes system. Every root feature will (probably) ask for the sudo password.
+
 Oh! And remember...
 ## I DONT TAKE ANY RESPONABILITY!
 
