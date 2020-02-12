@@ -18,7 +18,8 @@ This will make my work debugging easyer (and will for sure improve your experien
 
 Do not run this as root, as you will break the notes system. Every root feature will (probably) ask for the sudo password.
 
-Oh! And remember...
-## I DONT TAKE ANY RESPONABILITY!
+### Oh! And remember...
+
+## I DONT TAKE ANY RESPONSABILITY!
 
 ### Have fun ;) !
